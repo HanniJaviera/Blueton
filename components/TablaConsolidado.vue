@@ -16,7 +16,7 @@
       </thead>
       <tbody>
         <tr v-for="fila in filas" :key="fila.id_profesional + fila.mes">
-          <td>
+          <td class="principal">
             <NuxtLink
               v-if="agruparPor === 'instituto'"
               :to="`/instituto/${encodeURIComponent(fila.instituto)}`"
@@ -27,12 +27,12 @@
               {{ fila.nombre }}
             </NuxtLink>
           </td>
-          <td>{{ fila.cargo }}</td>
-          <td>{{ fila.horas_contratadas }} h</td>
-          <td>{{ fila.horas_directa }} h</td>
-          <td>{{ fila.meta_atenciones }}</td>
-          <td>{{ fila.atenciones_sic }}</td>
-          <td>
+          <td data-label="Cargo">{{ fila.cargo }}</td>
+          <td data-label="Horas contratadas">{{ horas(fila.horas_contratadas) }} h</td>
+          <td data-label="Horas directa">{{ horas(fila.horas_directa) }} h</td>
+          <td data-label="Meta atenciones">{{ fila.meta_atenciones }}</td>
+          <td data-label="Atenciones SIC">{{ fila.atenciones_sic ?? '—' }}</td>
+          <td data-label="Desviación">
             <AlertaDesviacion :meta-atenciones="fila.meta_atenciones" :atenciones-sic="fila.atenciones_sic" />
           </td>
         </tr>
@@ -88,6 +88,49 @@ a {
   text-align: center;
   color: var(--texto-secundario);
   padding: 1.5rem;
+}
+/* Teléfono: cada fila pasa a ser una tarjeta con sus datos rotulados (sin scroll lateral) */
+@media (max-width: 600px) {
+  .tabla-wrap {
+    overflow-x: visible;
+    background: transparent;
+    border: none;
+  }
+  table {
+    min-width: 0;
+  }
+  thead {
+    display: none;
+  }
+  tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem 1rem;
+    background: var(--fondo-card);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.6rem;
+  }
+  td {
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+  }
+  td::before {
+    content: attr(data-label);
+    font-size: 0.75rem;
+    color: var(--texto-secundario);
+  }
+  td.principal {
+    grid-column: 1 / -1;
+    font-size: 1.05rem;
+  }
+  td.vacio {
+    grid-column: 1 / -1;
+  }
 }
 .sr-only {
   position: absolute;

@@ -6,7 +6,7 @@
     <h1>{{ fila?.nombre || detalle?.profesional.nombre || cargoBonito }}</h1>
     <p class="ficha">
       <template v-if="fila">
-        {{ fila.cargo }} · {{ fila.area }} · {{ fila.instituto }} · {{ fila.horas_contratadas }} h contratadas
+        {{ fila.cargo }} · {{ fila.area }} · {{ fila.instituto }} · {{ horas(fila.horas_contratadas) }} h contratadas
       </template>
       <template v-else-if="detalle">
         {{ cargoBonito }} · Área {{ detalle.profesional.area }} · {{ detalle.profesional.instituto }}
@@ -53,9 +53,9 @@
     <section v-if="fila" class="horas" aria-labelledby="horas-titulo">
       <h2 id="horas-titulo">Distribución de horas</h2>
       <dl>
-        <div><dt>Directa</dt><dd>{{ fila.horas_directa }} h</dd></div>
-        <div><dt>Indirecta</dt><dd>{{ fila.horas_indirecta }} h</dd></div>
-        <div><dt>No asistencial (NAS)</dt><dd>{{ fila.horas_nas }} h</dd></div>
+        <div><dt>Directa</dt><dd>{{ horas(fila.horas_directa) }} h</dd></div>
+        <div><dt>Indirecta</dt><dd>{{ horas(fila.horas_indirecta) }} h</dd></div>
+        <div><dt>No asistencial (NAS)</dt><dd>{{ horas(fila.horas_nas) }} h</dd></div>
       </dl>
     </section>
 

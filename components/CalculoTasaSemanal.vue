@@ -9,7 +9,7 @@
       <div><dt>% NAS</dt><dd>{{ pct(p.pct_nas, 0) }}</dd></div>
       <div><dt>% Directo / Indirecto</dt><dd>{{ pct(p.pct_directo, 0) }} / {{ pct(p.pct_indirecto, 0) }}</dd></div>
       <div><dt>Min. estándar dir / ind</dt><dd>{{ p.min_directa }} / {{ p.min_indirecta }}</dd></div>
-      <div><dt>H NAS / H asignaciones</dt><dd>{{ n(p.h_nas, 2) }} / {{ n(p.h_asignaciones, 2) }}</dd></div>
+      <div><dt>H NAS / H asignaciones</dt><dd>{{ n(p.h_nas, 1) }} / {{ n(p.h_asignaciones, 1) }}</dd></div>
       <div><dt>Factor grupal</dt><dd>{{ p.pct_grupal ? `${pct(p.pct_grupal, 0)} · ${p.n_pacientes} pacientes` : 'No aplica' }}</dd></div>
       <div><dt>Colación en contrato</dt><dd>{{ n(colacion, 1) }} h/sem</dd></div>
     </dl>
@@ -58,7 +58,7 @@ const filas: { label: string; valor: (t: TasaPeriodo) => string | number; fuerte
   { label: '% NAS + asignaciones', valor: (t) => pct(t.at) },
   { label: '% Directo final', valor: (t) => pct(t.au) },
   { label: '% Indirecto final', valor: (t) => pct(t.av) },
-  { label: 'H/sem para atención', valor: (t) => n(t.ax, 2) },
+  { label: 'H/sem para atención', valor: (t) => n(t.ax) },
   { label: 'Atenciones directas/sem', valor: (t) => t.ba },
   { label: 'Atenciones indirectas/sem', valor: (t) => t.bb },
   { label: 'Directa + grupal/sem', valor: (t) => t.bf },

@@ -483,4 +483,15 @@ button:disabled { opacity: 0.55; cursor: not-allowed; }
 @media (max-width: 700px) {
   .semanas { grid-template-columns: repeat(6, 1fr); }
 }
+/* Si una tabla no cabe, desliza dentro de su bloque (no estira toda la página) */
+.bloque { overflow-x: auto; }
+/* Teléfono: campos de texto más angostos, guardar a lo ancho */
+@media (max-width: 600px) {
+  .bloque, .guardar { padding: 0.9rem; }
+  input.txt { min-width: 8rem; }
+  .impacto { gap: 1rem; position: static; }
+  .impacto strong { font-size: 1.25rem; }
+  .acciones { flex-direction: column; align-items: stretch; }
+  .acciones label { justify-content: space-between; }
+}
 </style>

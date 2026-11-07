@@ -1,13 +1,14 @@
 <template>
   <div class="lectura" :class="{ 'sobre-color': sobreColor }" role="group" aria-label="Opciones de lectura" data-no-leer>
-    <button type="button" :aria-pressed="letraGrande" @click="letraGrande = !letraGrande">
-      <span aria-hidden="true">A+</span> Letra grande
+    <!-- En el teléfono solo se ve el ícono; el texto queda para lectores de pantalla (.txt) -->
+    <button type="button" :aria-pressed="letraGrande" title="Letra grande" @click="letraGrande = !letraGrande">
+      <span aria-hidden="true">A+</span> <span class="txt">Letra grande</span>
     </button>
-    <button type="button" :aria-pressed="altoContraste" @click="altoContraste = !altoContraste">
-      <span aria-hidden="true">◐</span> Alto contraste
+    <button type="button" :aria-pressed="altoContraste" title="Alto contraste" @click="altoContraste = !altoContraste">
+      <span aria-hidden="true">◐</span> <span class="txt">Alto contraste</span>
     </button>
-    <button v-if="vozDisponible" type="button" :aria-pressed="leyendo" @click="alternarLectura">
-      <span aria-hidden="true">{{ leyendo ? '⏹' : '🔊' }}</span> {{ leyendo ? 'Detener lectura' : 'Leer en voz alta' }}
+    <button v-if="vozDisponible" type="button" :aria-pressed="leyendo" :title="leyendo ? 'Detener lectura' : 'Leer en voz alta'" @click="alternarLectura">
+      <span aria-hidden="true">{{ leyendo ? '⏹' : '🔊' }}</span> <span class="txt">{{ leyendo ? 'Detener lectura' : 'Leer en voz alta' }}</span>
     </button>
   </div>
 </template>
@@ -102,6 +103,23 @@ onBeforeUnmount(detener)
 .lectura button:focus-visible {
   outline: 3px solid var(--marca-dorado);
   outline-offset: 2px;
+}
+/* Teléfono: botones de solo ícono, en una fila; el texto sigue disponible para lectores de pantalla */
+@media (max-width: 600px) {
+  .lectura button {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0.35rem 0.7rem;
+    font-size: 1rem;
+  }
+  .txt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
 }
 /* Sobre fondos de color (pantalla de inicio): botones claros translúcidos */
 .sobre-color button {

@@ -104,4 +104,24 @@ function limpiar() {
 .btn-limpiar:hover {
   background: var(--acento-suave);
 }
+/* Teléfono: filtros en dos columnas de ancho completo; el mes y "Limpiar" ocupan la fila entera */
+@media (max-width: 600px) {
+  .filtros-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+  .filtro {
+    min-width: 0;
+  }
+  .filtro select {
+    width: 100%;
+    font: inherit;
+    font-size: 0.95rem;
+  }
+  .filtros-bar > :not(.filtro) {
+    grid-column: 1 / -1;
+  }
+}
 </style>

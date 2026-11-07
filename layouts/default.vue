@@ -14,9 +14,17 @@
         </div>
       </div>
 
+      <!-- Solo en pantallas angostas: abre el menú desplegable -->
+      <button
+        type="button" class="menu-boton" aria-controls="menu-principal"
+        :aria-expanded="menuAbierto" @click="menuAbierto = !menuAbierto"
+      >
+        <span aria-hidden="true">{{ menuAbierto ? '✕' : '☰' }}</span> Menú
+      </button>
+
       <div class="derecha">
         <BuscadorProfesional />
-        <nav aria-label="Navegación principal">
+        <nav id="menu-principal" aria-label="Navegación principal" :class="{ abierto: menuAbierto }">
           <NuxtLink to="/" class="inicio">Inicio</NuxtLink>
           <NuxtLink to="/graficos">Gráficos</NuxtLink>
           <NuxtLink to="/nacional">Nacional</NuxtLink>
@@ -33,6 +41,18 @@
     </main>
   </div>
 </template>
+
+<script setup lang="ts">
+// Menú desplegable del teléfono: se cierra al cambiar de página o con Escape.
+const menuAbierto = ref(false)
+const route = useRoute()
+watch(() => route.fullPath, () => (menuAbierto.value = false))
+function alPresionar(e: KeyboardEvent) {
+  if (e.key === 'Escape') menuAbierto.value = false
+}
+onMounted(() => window.addEventListener('keydown', alPresionar))
+onBeforeUnmount(() => window.removeEventListener('keydown', alPresionar))
+</script>
 
 <style scoped>
 .layout {
@@ -153,8 +173,13 @@ nav a.router-link-active {
   display: flex;
   flex-direction: column;
 }
-/* Celular: la barra se acomoda en varias líneas y no se sale de la pantalla */
-@media (max-width: 760px) {
+.menu-boton {
+  display: none;
+}
+
+/* Pantallas angostas (tablet y teléfono): logos + botón "Menú" arriba, buscador abajo,
+   y los enlaces en un panel desplegable en vez de en línea. */
+@media (max-width: 900px) {
   .header {
     flex-wrap: wrap;
     gap: 0.6rem;
@@ -163,18 +188,86 @@ nav a.router-link-active {
   .app-title-badge {
     display: none;
   }
+  .menu-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font: inherit;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+  }
+  .menu-boton:focus-visible {
+    outline: 3px solid var(--marca-dorado);
+    outline-offset: 2px;
+  }
   .derecha {
     width: 100%;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
+  .derecha > :first-child {
+    flex: 1;
+    min-width: 0;
+  }
   nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--marca-navy);
+    border-bottom: 3.5px solid #ffffff;
+    box-shadow: 0 12px 24px rgba(11, 14, 38, 0.35);
+    padding: 0.25rem 0;
+  }
+  nav.abierto {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem 0.9rem;
   }
   nav a {
     margin-left: 0;
-    font-size: 0.88rem;
+    font-size: 1.05rem;
+    padding: 0.85rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  nav a.router-link-active {
+    background: rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    box-shadow: inset 4px 0 0 var(--marca-dorado);
+  }
+  .contenido {
+    padding: 1rem;
+  }
+}
+
+/* Teléfono: barra más baja y que no quede fija (deja más pantalla para el contenido);
+   logos más chicos para que "Menú" quepa en la misma fila, y sin íconos de marca
+   para que el buscador tenga espacio. */
+@media (max-width: 600px) {
+  .header {
+    position: relative;
+    padding: 0.6rem 0.85rem;
+  }
+  .marca {
+    gap: 0.5rem;
+  }
+  .logo {
+    height: 18px;
+  }
+  .logo-duoc {
+    height: 20px;
+  }
+  .menu-boton {
+    padding: 0.35rem 0.75rem;
+  }
+  /* íconos de marca (IconosMarca, último elemento de la barra) */
+  .derecha > :deep(:last-child) {
+    display: none;
   }
 }
 </style>

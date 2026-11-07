@@ -314,6 +314,20 @@ h1 {
   background: var(--fondo-card);
   min-width: 10rem;
 }
+/* Teléfono: Mes e Instituto se reparten el ancho (antes se salían y abrían una franja blanca a la derecha) */
+@media (max-width: 600px) {
+  .filtros {
+    width: 100%;
+  }
+  .filtros label {
+    flex: 1;
+    min-width: 0;
+  }
+  .filtros select {
+    min-width: 0;
+    width: 100%;
+  }
+}
 .semaforo {
   display: flex;
   flex-wrap: wrap;

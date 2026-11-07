@@ -4,8 +4,8 @@
     <h2 id="lf-titulo">Resumen simple</h2>
     <ul>
       <li>{{ fila.nombre }} trabaja en {{ fila.instituto }}, en el área de {{ fila.area }}.</li>
-      <li>Tiene {{ fila.horas_contratadas }} horas a la semana.</li>
-      <li>De esas horas, {{ fila.horas_directa }} son para atender pacientes.</li>
+      <li>Tiene {{ horas(fila.horas_contratadas) }} horas a la semana.</li>
+      <li>De esas horas, {{ horas(fila.horas_directa) }} son para atender pacientes.</li>
       <li>Su meta este mes es {{ fila.meta_atenciones }} atenciones.</li>
       <li>
         Hasta ahora ha hecho {{ fila.atenciones_sic }} atenciones,

@@ -79,12 +79,14 @@ async function ir() {
   align-items: center;
   gap: 0.4rem;
   position: relative;
+  min-width: 0;
 }
 input {
   font: inherit;
   font-size: 0.88rem;
   width: 16rem;
-  max-width: 45vw;
+  flex: 1 1 16rem; /* en el teléfono se encoge en vez de salirse de la barra */
+  min-width: 0;
   padding: 0.4rem 0.75rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.6);
