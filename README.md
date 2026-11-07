@@ -56,7 +56,22 @@ Blue Prism sube `planificacion.json` y `bitacora.json` al Blob; el dashboard los
 | `NUXT_PUBLIC_MS_CLIENT_ID` | Application (client) ID de Microsoft |
 | `NUXT_PUBLIC_MS_TENANT` | `common` (cuentas personales y de empresa) |
 
+| `NUXT_BLOB_SAS_ESCRITURA` | **Secreta, solo servidor.** SAS con Create + Write (sin `?`) para guardar `parametros.json` |
+| `NUXT_PARAMETROS_CLAVE` | **Secreta.** Clave que pide la pantalla Parámetros para guardar |
+
 Sin `BLOB_URL` usa los mocks; sin client IDs no pide login (modo demo).
+
+### Parámetros y recálculo
+
+La pantalla **Parámetros** edita las reglas (7 módulos) y las guarda en `parametros.json` del Blob
+(vía `server/api/parametros.put.ts`, con historial de quién/qué/por qué). Si aún no existe, se usa
+`data/parametros.base.json` (carga inicial desde la planilla). El dashboard recalcula cada fila con
+`utils/motor.ts` (lógica de `logica.md`, validada al 99,5% contra la planilla: `scripts/validar_motor/`).
+
+Para recalcular, cada fila de `planificacion.json` (una por profesional, instituto y mes) necesita:
+`id_profesional`, `mes`, `instituto`, `cargo` (como en Distribucion_NAC), `cod_esp` (KI, AS, ULAB…),
+`horas_contratadas`, `semanas`, `sem_habiles`, `h_asignaciones` y `colacion_contrato_h`.
+Si falta `sem_habiles`, se muestran los valores que calculó Blue Prism sin recalcular.
 
 ## Publicar en Vercel
 

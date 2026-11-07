@@ -1,0 +1,2584 @@
+{
+ "version": 1,
+ "actualizado_en": null,
+ "actualizado_por": "Carga inicial desde Nac - Planificación Asistencial x mes.xlsx",
+ "tramos": {
+  "alto_desde": 40,
+  "medio_desde": 22
+ },
+ "distribucion": [
+  {
+   "cargo": "ANALISTA UNIDAD LABORAL ULAB",
+   "esp": "ULAB",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "ASESOR DE EMPRENDIMIENTO",
+   "esp": "ULAB",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "PROFESIONAL PARA LA GESTION DE INCLUSION LABORAL",
+   "esp": "ULAB",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "COORDINADOR ULAB",
+   "esp": "ULAB",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "EDUCADOR ULAB",
+   "esp": "",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "GESTOR DE CAPACITACION",
+   "esp": "ULAB",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "GESTOR LABORAL",
+   "esp": "",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "TERAPEUTA OCUPACIONAL ULAB",
+   "esp": "",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "TERAPEUTA OCUPACIONAL ULAB ULAB",
+   "esp": "",
+   "unidad": "UNIDAD LABORAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE TELEREHABILITACION",
+   "esp": "ULAB",
+   "unidad": "TELEREHABILITACIÓN",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "JEFE UNIDAD TERAPIAS ARTISTICAS CREATIVAS",
+   "esp": "UTAC",
+   "unidad": "ARTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "PROFESOR DE MUSICA",
+   "esp": "UTAC",
+   "unidad": "ARTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "PROFESOR DE TEATRO",
+   "esp": "UTAC",
+   "unidad": "ARTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE DEPORTES",
+   "esp": "UEDA",
+   "unidad": "DEPORTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.45,
+    "ind": 0.05,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.45,
+    "ind": 0.05,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.45,
+    "ind": 0.05,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "COORDINADOR NACIONAL UEDA",
+   "esp": "",
+   "unidad": "DEPORTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.45,
+    "ind": 0.05,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.45,
+    "ind": 0.05,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.45,
+    "ind": 0.05,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "PREPARADOR FISICO",
+   "esp": "UEDA",
+   "unidad": "DEPORTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.2,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "PROFESOR DE EDUCACION FISICA",
+   "esp": "UEDA",
+   "unidad": "DEPORTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.2,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "DIRECTOR INSTITUTO",
+   "esp": "ED",
+   "unidad": "DIRECCIÓN",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE EDUCACION",
+   "esp": "ED",
+   "unidad": "EDUCACIÓN",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "EDUCADOR",
+   "esp": "ED",
+   "unidad": "EDUCACIÓN",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "JEFE DE EDUCACION",
+   "esp": "EN",
+   "unidad": "EDUCACIÓN",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "ENFERMERA DE GESTIÓN QUIRÚRGICA",
+   "esp": "EN",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "JEFE DE SERVICIOS SOCIALES Y COMUNITARIOS",
+   "esp": "EN",
+   "unidad": "EDUCACIÓN",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   }
+  },
+  {
+   "cargo": "ENFERMERA COORDINADORA AMBULATORIO",
+   "esp": "",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "ENFERMERA COORDINADORA DE HOSPITALIZADOS",
+   "esp": "EN",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "JEFE TERAPIA OCUPACIONAL AC",
+   "esp": "TO",
+   "unidad": "T. OCUPACIONAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   }
+  },
+  {
+   "cargo": "ENFERMERO",
+   "esp": "EN",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.5,
+    "ind": 0.2,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.55,
+    "ind": 0.2,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "ENFERMERO COORDINADOR",
+   "esp": "",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "ENCARGADA DE CALIDAD",
+   "esp": "",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 1.0
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 1.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 1.0
+   }
+  },
+  {
+   "cargo": "ENFERMERA",
+   "esp": "",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.5,
+    "ind": 0.2,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.55,
+    "ind": 0.2,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "ENFERMERA COORDINADORA",
+   "esp": "",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "JEFE DE ATENCION AL PACIENTE",
+   "esp": "EN",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 1.0
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 1.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 1.0
+   }
+  },
+  {
+   "cargo": "JEFE DE ENFERMERIA",
+   "esp": "EN",
+   "unidad": "ENFERMERÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "COORDINADOR NACIONAL DE LABORATORIO DE MARCHA Y MOVIMIENTO",
+   "esp": "",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "DIRECTOR INSTITUTO FI",
+   "esp": "FI",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   }
+  },
+  {
+   "cargo": "JEFE MEDICO",
+   "esp": "FI",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "MEDICO FISIATRA",
+   "esp": "FI",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   }
+  },
+  {
+   "cargo": "MEDICO FISIATRA INVEST",
+   "esp": "FI",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   }
+  },
+  {
+   "cargo": "MEDICO GENERAL FI",
+   "esp": "FI",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "MEDICO HOSPITALIZADOS",
+   "esp": "FI",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "SUBDIRECTORA MÉDICA",
+   "esp": "",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE FONOAUDIOLOGIA",
+   "esp": "",
+   "unidad": "FONOAUDIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "FONOAUDIOLOGO",
+   "esp": "FI",
+   "unidad": "FONOAUDIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.1,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.7,
+    "ind": 0.1,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "JEFE DE FONOAUDIOLOGIA",
+   "esp": "",
+   "unidad": "FONOAUDIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE KINESIOLOGIA",
+   "esp": "FI",
+   "unidad": "KINESIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "DIRECTOR INSTITUTO KI",
+   "esp": "FO",
+   "unidad": "KINESIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   }
+  },
+  {
+   "cargo": "JEFE KINESIOLOGIA",
+   "esp": "KI",
+   "unidad": "KINESIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "KINESIOLOGO",
+   "esp": "KI",
+   "unidad": "KINESIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.1,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.7,
+    "ind": 0.1,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "COORDINADOR LABORATORIO DE MARCHA Y MOVIMIENTO",
+   "esp": "FO",
+   "unidad": "KINESIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "SUB JEFE DE KINESIOLOGIA",
+   "esp": "KI",
+   "unidad": "KINESIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "JEFE MEDICO HOSPITALIZADOS",
+   "esp": "KI",
+   "unidad": "MEDICO G",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "JEFE KINESIOLOGIA AC",
+   "esp": "FO",
+   "unidad": "KINESIOLOGÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   }
+  },
+  {
+   "cargo": "MEDICO GENERAL",
+   "esp": "KI",
+   "unidad": "MEDICO G",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "MEDICO NEUROLOGO",
+   "esp": "NE",
+   "unidad": "NEUROLOGÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.7,
+    "ind": 0.15,
+    "nas": 0.15
+   },
+   "medio": {
+    "dir": 0.7,
+    "ind": 0.15,
+    "nas": 0.15
+   },
+   "bajo": {
+    "dir": 0.7,
+    "ind": 0.15,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "JEFE NACIONAL DE NUTRICION",
+   "esp": "NU",
+   "unidad": "NUTRICIÓN",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "NUTRICIONISTA",
+   "esp": "NU",
+   "unidad": "NUTRICIÓN",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.1,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "MEDICO ODONTOLOGO",
+   "esp": "OD",
+   "unidad": "ODONTOLOGÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.75,
+    "ind": 0.0,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.75,
+    "ind": 0.0,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.0,
+    "nas": 0.25
+   }
+  },
+  {
+   "cargo": "MEDICO GENERAL PE",
+   "esp": "PE",
+   "unidad": "PEDIATRÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "MEDICO PEDIATRA",
+   "esp": "PE",
+   "unidad": "PEDIATRÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "COORDINADOR MEDICO",
+   "esp": "FI",
+   "unidad": "FISIATRÍA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE PSICOSOCIAL",
+   "esp": "PC",
+   "unidad": "PSICOLOGÍA",
+   "min_dir": 45.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "COORDINADOR UNIDAD PSICOLOGIA",
+   "esp": "",
+   "unidad": "PSICOLOGÍA",
+   "min_dir": 45.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "PSICOLOGO",
+   "esp": "PC",
+   "unidad": "PSICOLOGÍA",
+   "min_dir": 45.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "SUB JEFE DE PSICOSOCIAL",
+   "esp": "PC",
+   "unidad": "PSICOLOGÍA",
+   "min_dir": 45.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "DIRECTOR IT PS",
+   "esp": "PC",
+   "unidad": "PSIQUIATRÍA",
+   "min_dir": 30.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "medio": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   },
+   "bajo": {
+    "dir": 0.1,
+    "ind": 0.1,
+    "nas": 0.8
+   }
+  },
+  {
+   "cargo": "ASISTENTE SOCIAL",
+   "esp": "AS",
+   "unidad": "SERVICIO SOCIAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE SERVICIOS SOCIALES Y COMUNITARIOS",
+   "esp": "AS",
+   "unidad": "SERVICIO SOCIAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "COORDINADOR UNIDAD TRABAJO SOCIAL",
+   "esp": "AS",
+   "unidad": "SERVICIO SOCIAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "JEFE PSICOSOCIAL",
+   "esp": "AS",
+   "unidad": "SERVICIO SOCIAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "JEFE PSICOSOCIAL AS",
+   "esp": "TO",
+   "unidad": "SERVICIO SOCIAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "COORDINADOR DE TERAPIA OCUPACIONAL",
+   "esp": "TO",
+   "unidad": "T. OCUPACIONAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.4,
+    "ind": 0.1,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "JEFE TERAPIA OCUPACIONAL",
+   "esp": "TO",
+   "unidad": "T. OCUPACIONAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "medio": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   },
+   "bajo": {
+    "dir": 0.3,
+    "ind": 0.1,
+    "nas": 0.6
+   }
+  },
+  {
+   "cargo": "SUB JEFE DE TERAPIA OCUPACIONAL",
+   "esp": "TO",
+   "unidad": "T. OCUPACIONAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.2,
+    "ind": 0.1,
+    "nas": 0.7
+   },
+   "medio": {
+    "dir": 0.2,
+    "ind": 0.1,
+    "nas": 0.7
+   },
+   "bajo": {
+    "dir": 0.2,
+    "ind": 0.1,
+    "nas": 0.7
+   }
+  },
+  {
+   "cargo": "TERAPEUTA OCUPACIONAL",
+   "esp": "UTA",
+   "unidad": "T. OCUPACIONAL",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.65,
+    "ind": 0.1,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.7,
+    "ind": 0.1,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "COORDINADOR UTA",
+   "esp": "ULAB",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.2,
+    "ind": 0.1,
+    "nas": 0.7
+   },
+   "medio": {
+    "dir": 0.2,
+    "ind": 0.1,
+    "nas": 0.7
+   },
+   "bajo": {
+    "dir": 0.2,
+    "ind": 0.1,
+    "nas": 0.7
+   }
+  },
+  {
+   "cargo": "COORDINADOR UTA UTA",
+   "esp": "UTA",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "medio": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   },
+   "bajo": {
+    "dir": 0.35,
+    "ind": 0.15,
+    "nas": 0.5
+   }
+  },
+  {
+   "cargo": "DISEÑADOR INDUSTRIAL UTA",
+   "esp": "UTA",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "EDUCADOR UTA",
+   "esp": "UTA",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "INGENIERO CIVIL BIOMEDICO",
+   "esp": "",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "ARTE TERAPEUTA",
+   "esp": "",
+   "unidad": "ARTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "MUSICOTERAPEUTA",
+   "esp": "",
+   "unidad": "ARTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "INGENIERO CIVIL BIOMEDICO UTA",
+   "esp": "UTA",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "PROFESOR DE ARTE",
+   "esp": "UTAC",
+   "unidad": "ARTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "PROFESOR DE DANZA",
+   "esp": "UTAC",
+   "unidad": "ARTE",
+   "min_dir": 60.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "INGENIERO EN TECNOLOGÍAS DE LA REHABILITACIÓN",
+   "esp": "",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.55,
+    "ind": 0.15,
+    "nas": 0.3
+   },
+   "medio": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "TERAPEUTA OCUPACIONAL UTA",
+   "esp": "TR",
+   "unidad": "TEC. ASISTIVA",
+   "min_dir": 40.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.15,
+    "nas": 0.25
+   },
+   "medio": {
+    "dir": 0.65,
+    "ind": 0.15,
+    "nas": 0.2
+   },
+   "bajo": {
+    "dir": 0.75,
+    "ind": 0.1,
+    "nas": 0.15
+   }
+  },
+  {
+   "cargo": "Cargo",
+   "esp": "",
+   "unidad": "Unidad",
+   "min_dir": 0.0,
+   "min_ind": 0.0,
+   "alto": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   }
+  },
+  {
+   "cargo": "MEDICO NEUROCIRUJANO",
+   "esp": "",
+   "unidad": "NEUROLOGÍA",
+   "min_dir": 420.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.3,
+    "nas": 0.10000000000000009
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   }
+  },
+  {
+   "cargo": "COORDINADOR QUIRURGICO ZONA NORTE",
+   "esp": "",
+   "unidad": "ORTOPEDIA",
+   "min_dir": 240.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.3,
+    "nas": 0.10000000000000009
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   }
+  },
+  {
+   "cargo": "JEFE DE EQUIPO ORTOPEDIA EXTREMIDAD INFERIOR",
+   "esp": "",
+   "unidad": "ORTOPEDIA",
+   "min_dir": 240.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.3,
+    "nas": 0.10000000000000009
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   }
+  },
+  {
+   "cargo": "JEFE DE EQUIPO ORTOPEDIA EXTREMIDAD SUPERIOR",
+   "esp": "",
+   "unidad": "ORTOPEDIA",
+   "min_dir": 240.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.3,
+    "nas": 0.10000000000000009
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   }
+  },
+  {
+   "cargo": "MEDICO ORTOPEDISTA",
+   "esp": "",
+   "unidad": "ORTOPEDIA",
+   "min_dir": 240.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.3,
+    "nas": 0.10000000000000009
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   }
+  },
+  {
+   "cargo": "MEDICO UROLOGO",
+   "esp": "",
+   "unidad": "UROLOGÍA",
+   "min_dir": 180.0,
+   "min_ind": 30.0,
+   "alto": {
+    "dir": 0.6,
+    "ind": 0.3,
+    "nas": 0.10000000000000009
+   },
+   "medio": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   },
+   "bajo": {
+    "dir": 0.0,
+    "ind": 0.0,
+    "nas": 0.0
+   }
+  }
+ ],
+ "asignaciones": {
+  "max_por_profesional": 2,
+  "catalogo": [
+   {
+    "nombre": "Coordinacion nacional WeeFIM",
+    "horas": 0.0,
+    "detalle": "Definidos DMN",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Capacitación",
+    "horas": 0.0,
+    "detalle": "Autorizado DMN",
+    "requiere_autorizacion": true,
+    "activa": true
+   },
+   {
+    "nombre": "Acreditación",
+    "horas": 0.0,
+    "detalle": "Definidos DMN- Según plan de calidad",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Actividades Coordinación ULAB",
+    "horas": 0.0,
+    "detalle": "Definidos por GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Coordinador Kinesiologia",
+    "horas": 0.0,
+    "detalle": "Definidos por GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Docencia DMN",
+    "horas": 0.0,
+    "detalle": "Definidos DMN",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Responsable Tecnico (2do Programa)",
+    "horas": 0.0,
+    "detalle": "Definidos por GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Actividades de Coordinacion",
+    "horas": 0.0,
+    "detalle": "Definidos por GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Musica (DMN)",
+    "horas": 0.0,
+    "detalle": "Definidos por GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Desarrollo técnico",
+    "horas": 0.0,
+    "detalle": "Definidos por GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Dirigente Sindical",
+    "horas": 0.0,
+    "detalle": "Definidos por GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Responsable Tecnico Gestiona Inclusion",
+    "horas": 0.0,
+    "detalle": "Definidos por Programa Local",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Atenciones Otro IT",
+    "horas": 0.0,
+    "detalle": "Definidos DMN GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Coordinacion Casa acogida",
+    "horas": 0.0,
+    "detalle": "Definidos DMN GP",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Responsable técnico",
+    "horas": 1.0,
+    "detalle": "Hora semana por programa de voluntariado",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Comité paritario",
+    "horas": 0.5,
+    "detalle": "Semana",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Casa de acogida Santiago",
+    "horas": 1.0,
+    "detalle": "Semana",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Coordinación WeeFIM (Local) por IT",
+    "horas": 1.0,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "GMFM (Local) Por IT",
+    "horas": 1.0,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Tutor docente",
+    "horas": 1.0,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Coordinador docente",
+    "horas": 1.0,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Coordinador docente",
+    "horas": 1.0,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Coordinación Tetca/tetco/ Uta(Local) por IT",
+    "horas": 1.0,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Líder Equipo",
+    "horas": 2.0,
+    "detalle": "Semanales para actividades de rol de lider. ",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Investigación",
+    "horas": 2.0,
+    "detalle": "Semanales una vez aprobado por CEC",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Desarrollo técnico AM",
+    "horas": 5.0,
+    "detalle": "Arlette Moraga  - Contrato",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Investigación AM",
+    "horas": 4.0,
+    "detalle": "Arlette Moraga  - Contrato",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Traslado inter clinica",
+    "horas": 0.0,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "CEA",
+    "horas": 0.25,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Mesas Tecnicas SSYC",
+    "horas": 0.5,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Mesas Tecnicas SDM",
+    "horas": 0.5,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Mesas Tecnicas SDM",
+    "horas": 0.5,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   },
+   {
+    "nombre": "Reunion Sindical (Dentro de contrato)",
+    "horas": 0.25,
+    "detalle": "Semanal",
+    "requiere_autorizacion": false,
+    "activa": true
+   }
+  ]
+ },
+ "grupal": [
+  {
+   "area": "AS",
+   "pct": 0.1,
+   "pacientes_san_con": 3.0,
+   "pacientes_otros": 1.5
+  },
+  {
+   "area": "ED",
+   "pct": 0.1,
+   "pacientes_san_con": 3.0,
+   "pacientes_otros": 1.5
+  },
+  {
+   "area": "UEDA",
+   "pct": 0.55,
+   "pacientes_san_con": 6.0,
+   "pacientes_otros": 3.0
+  },
+  {
+   "area": "ULAB",
+   "pct": 0.1,
+   "pacientes_san_con": 3.0,
+   "pacientes_otros": 1.5
+  },
+  {
+   "area": "UTAC",
+   "pct": 0.55,
+   "pacientes_san_con": 6.0,
+   "pacientes_otros": 3.0
+  }
+ ],
+ "calendario": {
+  "anio": 2026,
+  "feriados": [
+   {
+    "fecha": "2026-02-02",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-03",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-04",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-05",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-06",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-09",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-10",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-11",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-12",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-13",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-16",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-17",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-18",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-19",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-02-20",
+    "nombre": "Feriado Colectivo",
+    "tipo": "colectivo",
+    "region": null
+   },
+   {
+    "fecha": "2026-01-01",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-04-03",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-05-01",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-05-21",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-06-29",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-07-16",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-09-18",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-10-12",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-12-08",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-12-25",
+    "nombre": "Feriados 2026",
+    "tipo": "nacional",
+    "region": null
+   },
+   {
+    "fecha": "2026-06-07",
+    "nombre": "Feriado regional Arica",
+    "tipo": "regional",
+    "region": "Ari"
+   }
+  ],
+  "redondeo_arriba_meses": [
+   5,
+   7
+  ],
+  "vacaciones": {
+   "legales": 15,
+   "adicionales_staff": 5,
+   "adicionales_zona_extrema": 10
+  },
+  "dias_especiales": {
+   "administrativos": 3.5,
+   "cumpleanos": 1,
+   "otros": 1
+  },
+  "jornada_nacional_por_area": {
+   "AS": 1.5,
+   "ED": 1.5,
+   "PC": 1.5,
+   "UTA": 0.5,
+   "UEDA": 1.0,
+   "UTAC": 1.5,
+   "FI": 1.5,
+   "KI": 0.5,
+   "TO": 0.5,
+   "ULAB": 1.5
+  }
+ },
+ "jornada_meta": {
+  "jornada_legal": [
+   {
+    "desde": "2026-01",
+    "horas": 44
+   },
+   {
+    "desde": "2026-05",
+    "horas": 42
+   }
+  ],
+  "pct_meta": 0.9,
+  "pausa_saludable": {
+   "pct_desde_40": 0.1,
+   "pct_bajo_40": 0.06
+  }
+ },
+ "ajustes": [
+  {
+   "id_profesional": "71613",
+   "campo": "distribucion",
+   "valor": {
+    "dir": 0.1,
+    "ind": 0.0,
+    "nas": 0.9
+   },
+   "por_que": "Usa los % de JEFE TERAPIA OCUPACIONAL AC (planilla 2026)",
+   "quien": "Planilla 2026 (carga inicial)",
+   "fecha": "2026-11-07"
+  },
+  {
+   "id_profesional": "71232",
+   "campo": "min_dir",
+   "valor": 60,
+   "por_que": "Minutos de atención directa 60 en la planilla 2026 (su cargo dice 40)",
+   "quien": "Planilla 2026 (carga inicial)",
+   "fecha": "2026-11-07"
+  },
+  {
+   "id_profesional": "71292",
+   "campo": "min_dir",
+   "valor": 60,
+   "por_que": "Minutos de atención directa 60 en la planilla 2026 (su cargo dice 40)",
+   "quien": "Planilla 2026 (carga inicial)",
+   "fecha": "2026-11-07"
+  },
+  {
+   "id_profesional": "71372",
+   "campo": "min_dir",
+   "valor": 60,
+   "por_que": "Minutos de atención directa 60 en la planilla 2026 (su cargo dice 40)",
+   "quien": "Planilla 2026 (carga inicial)",
+   "fecha": "2026-11-07"
+  },
+  {
+   "id_profesional": "72458",
+   "campo": "min_dir",
+   "valor": 60,
+   "por_que": "Minutos de atención directa 60 en la planilla 2026 (su cargo dice 40)",
+   "quien": "Planilla 2026 (carga inicial)",
+   "fecha": "2026-11-07"
+  },
+  {
+   "id_profesional": "134744",
+   "campo": "ba",
+   "valor": 15,
+   "por_que": "Atenciones directas por semana escritas a mano en la planilla 2026 (la fórmula da 14)",
+   "quien": "Planilla 2026 (carga inicial)",
+   "fecha": "2026-11-07"
+  }
+ ],
+ "historial": []
+}

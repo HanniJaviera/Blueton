@@ -8,3 +8,9 @@ _respaldo
 *.log
 .DS_Store
 Thumbs.db
+
+# Excel del kit (datos del personal): nunca al repo público
+*.xlsx
+*.xlsm
+.env.prueba
+fixture.json

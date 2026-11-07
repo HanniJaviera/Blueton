@@ -85,9 +85,10 @@ function tasaPeriodo(porMes: any[][]): TasaPeriodo | null {
   return {
     h,
     base: h, // ponytail: el JSON no trae colación de contrato; base = horas
-    at: h ? (h - ax) / h : 0, // lo que no es atención = NAS + asignaciones
-    au: num(p[0].pct_directo),
-    av: num(p[0].pct_indirecto),
+    // at/au/av los entrega el motor (utils/motor.ts); si no, se aproximan.
+    at: p[0].at ?? (h ? (h - ax) / h : 0),
+    au: p[0].au ?? num(p[0].pct_directo),
+    av: p[0].av ?? num(p[0].pct_indirecto),
     ax,
     ba: sumaDe(p, 'ba'),
     bb: sumaDe(p, 'bb'),

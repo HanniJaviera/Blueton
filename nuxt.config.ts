@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   // Cuando la API real esté lista en la VM, basta con cambiar esta
   // variable de entorno (NUXT_PUBLIC_API_BASE) — sin tocar componentes.
   runtimeConfig: {
+    // Solo servidor (server/api/parametros.put.ts): nunca llegan al navegador.
+    blobSasEscritura: '', // NUXT_BLOB_SAS_ESCRITURA (SAS con Create + Write, sin el "?")
+    parametrosClave: '', // NUXT_PARAMETROS_CLAVE (clave para guardar parámetros)
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api',
       // Blob de Azure: URL del contenedor y SAS de lectura (sin el "?").
