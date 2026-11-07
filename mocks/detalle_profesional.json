@@ -1,0 +1,271 @@
+{
+  "_fuente": "Caso 71580 de docs/logica.md §10 (valores verificados contra el Excel). P0123 lo usa como ejemplo en los mocks.",
+  "71580": {
+    "profesional": {
+      "persona_id": 71580,
+      "nombre": null,
+      "cargo": "KINESIOLOGO",
+      "area": "KI",
+      "instituto": "Arica",
+      "ndias": 5,
+      "colacion_contrato_h": 0,
+      "vigencia_desde": "2026-01",
+      "vigencia_hasta": "2026-12"
+    },
+    "parametros": {
+      "clave_distribucion": "KINESIOLOGO",
+      "tramo": "≥ 40 h",
+      "pct_nas": 0.25,
+      "pct_directo": 0.65,
+      "pct_indirecto": 0.1,
+      "min_directa": 40,
+      "min_indirecta": 30,
+      "h_nas": 10.5,
+      "h_asignaciones": 2.25,
+      "pct_grupal": 0,
+      "n_pacientes": null,
+      "pct_meta": 0.9,
+      "asignaciones": [
+        {
+          "nombre": "GMFM (Local) Por IT",
+          "horas": 1
+        },
+        {
+          "nombre": "Tutor docente",
+          "horas": 1
+        },
+        {
+          "nombre": "Asignación 4",
+          "horas": 0.25
+        }
+      ]
+    },
+    "tasas": {
+      "p1": {
+        "h": 44,
+        "base": 44,
+        "at": 0.2898,
+        "au": 0.6155,
+        "av": 0.0947,
+        "ax": 31.25,
+        "ba": 40,
+        "bb": 8,
+        "bf": 40,
+        "bh": 48
+      },
+      "p2": {
+        "h": 42,
+        "base": 42,
+        "at": 0.3036,
+        "au": 0.6036,
+        "av": 0.0929,
+        "ax": 29.25,
+        "ba": 38,
+        "bb": 7,
+        "bf": 38,
+        "bh": 45
+      }
+    },
+    "ultimo_mes_buk": 7,
+    "meses": [
+      {
+        "mes": 1,
+        "horas": 44,
+        "semanas": 4.2,
+        "sem_habiles": 3.984,
+        "descuento_detalle": "Permiso 0,216 sem",
+        "plan_dir": 159,
+        "plan_total": 191,
+        "meta_dir": 143,
+        "meta_total": 171,
+        "descuentos": [
+          {
+            "tipo": "permiso",
+            "dias": 1
+          }
+        ]
+      },
+      {
+        "mes": 2,
+        "horas": 44,
+        "semanas": 4.0,
+        "sem_habiles": 0,
+        "descuento_detalle": "Vacaciones 4 sem",
+        "plan_dir": 0,
+        "plan_total": 0,
+        "meta_dir": 0,
+        "meta_total": 0,
+        "descuentos": [
+          {
+            "tipo": "vacaciones",
+            "dias": 20
+          }
+        ]
+      },
+      {
+        "mes": 3,
+        "horas": 44,
+        "semanas": 4.4,
+        "sem_habiles": 4.4,
+        "descuento_detalle": "",
+        "plan_dir": 176,
+        "plan_total": 211,
+        "meta_dir": 158,
+        "meta_total": 189,
+        "descuentos": []
+      },
+      {
+        "mes": 4,
+        "horas": 44,
+        "semanas": 4.2,
+        "sem_habiles": 4.2,
+        "descuento_detalle": "",
+        "plan_dir": 168,
+        "plan_total": 201,
+        "meta_dir": 151,
+        "meta_total": 180,
+        "descuentos": []
+      },
+      {
+        "mes": 5,
+        "horas": 42,
+        "semanas": 3.8,
+        "sem_habiles": 3.8,
+        "descuento_detalle": "",
+        "plan_dir": 144,
+        "plan_total": 171,
+        "meta_dir": 129,
+        "meta_total": 153,
+        "descuentos": []
+      },
+      {
+        "mes": 6,
+        "horas": 42,
+        "semanas": 4.2,
+        "sem_habiles": 4.2,
+        "descuento_detalle": "",
+        "plan_dir": 159,
+        "plan_total": 189,
+        "meta_dir": 143,
+        "meta_total": 170,
+        "descuentos": []
+      },
+      {
+        "mes": 7,
+        "horas": 42,
+        "semanas": 4.4,
+        "sem_habiles": 4.0,
+        "descuento_detalle": "Prorrateo días anuales 0,45 (redondeo ↑ a 1 decimal)",
+        "plan_dir": 152,
+        "plan_total": 180,
+        "meta_dir": 136,
+        "meta_total": 162,
+        "descuentos": [
+          {
+            "tipo": "dias_anuales",
+            "dias": 2.25
+          }
+        ]
+      },
+      {
+        "mes": 8,
+        "horas": 42,
+        "semanas": 4.2,
+        "sem_habiles": 3.75,
+        "descuento_detalle": "Prorrateo 0,45",
+        "plan_dir": 142,
+        "plan_total": 168,
+        "meta_dir": 127,
+        "meta_total": 151,
+        "descuentos": [
+          {
+            "tipo": "dias_anuales",
+            "dias": 2.25
+          }
+        ]
+      },
+      {
+        "mes": 9,
+        "horas": 42,
+        "semanas": 4.2,
+        "sem_habiles": 3.65,
+        "descuento_detalle": "Prorrateo 0,45 + vísperas Fiestas Patrias 0,1",
+        "plan_dir": 138,
+        "plan_total": 164,
+        "meta_dir": 124,
+        "meta_total": 147,
+        "descuentos": [
+          {
+            "tipo": "dias_anuales",
+            "dias": 2.25
+          },
+          {
+            "tipo": "vispera",
+            "nombre": "Fiestas Patrias",
+            "dias": 0.5
+          }
+        ]
+      },
+      {
+        "mes": 10,
+        "horas": 42,
+        "semanas": 4.2,
+        "sem_habiles": 3.75,
+        "descuento_detalle": "Prorrateo 0,45",
+        "plan_dir": 142,
+        "plan_total": 168,
+        "meta_dir": 127,
+        "meta_total": 151,
+        "descuentos": [
+          {
+            "tipo": "dias_anuales",
+            "dias": 2.25
+          }
+        ]
+      },
+      {
+        "mes": 11,
+        "horas": 42,
+        "semanas": 4.2,
+        "sem_habiles": 3.55,
+        "descuento_detalle": "Prorrateo 0,45 + cumpleaños 0,2",
+        "plan_dir": 134,
+        "plan_total": 159,
+        "meta_dir": 120,
+        "meta_total": 143,
+        "descuentos": [
+          {
+            "tipo": "dias_anuales",
+            "dias": 2.25
+          },
+          {
+            "tipo": "cumpleanos",
+            "dias": 1
+          }
+        ]
+      },
+      {
+        "mes": 12,
+        "horas": 42,
+        "semanas": 4.2,
+        "sem_habiles": 3.55,
+        "descuento_detalle": "Prorrateo 0,45 + vísperas Navidad/Año Nuevo 0,2",
+        "plan_dir": 134,
+        "plan_total": 159,
+        "meta_dir": 120,
+        "meta_total": 143,
+        "descuentos": [
+          {
+            "tipo": "dias_anuales",
+            "dias": 2.25
+          },
+          {
+            "tipo": "vispera",
+            "nombre": "Navidad y Año Nuevo",
+            "dias": 1
+          }
+        ]
+      }
+    ]
+  }
+}

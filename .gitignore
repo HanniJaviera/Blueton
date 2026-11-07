@@ -1,0 +1,10 @@
+node_modules
+.nuxt
+.output
+.env
+dist
+.data
+_respaldo
+*.log
+.DS_Store
+Thumbs.db

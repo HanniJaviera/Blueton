@@ -1,0 +1,174 @@
+/* ==========================================
+   PALETA Y VARIABLES DE MARCA (Botathon 2026)
+   ========================================== */
+:root {
+  /* Fondo general claro para tablas y datos */
+  --fondo: #f4f6f9;
+  --fondo-card: #ffffff;
+  --texto: #111827;
+  --texto-secundario: #4b5563;
+  --borde: #e2e8f0;
+
+  /* Marcas Institucionales */
+  --marca-navy: #0b0e26;        /* Azul noche profundo del header */
+  --marca-navy-suave: #1e2246;  /* Azul intermedio para acentos */
+  --marca-dorado: #f5b82e;      /* Amarillo Duoc para active/hover */
+  --marca-rojo: #e11d48;        /* Rojo Teletón para alertas y acentos */
+
+  /* Estados e Indicadores */
+  --acento-fuerte: var(--marca-navy);
+  --acento-suave: #eef2ff;
+
+  --ok: #059669;                /* Verde para estados conformes */
+  --ok-suave: #ecfdf5;
+
+  --alerta: #d97706;
+  --alerta-suave: #fffbeb;
+
+  --critico: var(--marca-rojo);
+  --critico-suave: #ffe4e6;     /* Fondo rosado para badge de desviación */
+  --critico-texto: #9f1239;     /* Texto rojo legible */
+}
+
+/* ==========================================
+   RESET UNIVERSAL Y BASE
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   ACCESIBILIDAD (WCAG)
+   ========================================== */
+a {
+  color: var(--marca-navy-suave);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 3px solid var(--marca-dorado);
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   ESTRUCTURA DE TARJETAS Y CONTENEDORES
+   ========================================== */
+.card, 
+.bitacora-container,
+.tarjeta {
+  background-color: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.contenido > .card:first-child,
+.contenido > div:first-child {
+  margin-top: 0;
+}
+
+/* ==========================================
+   TABLA DE DATOS Y CABECERA FIJA (STICKY)
+   ========================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* Cabecera fija justo debajo de la barra superior */
+table thead th {
+  position: sticky;
+  top: 54px; /* Encaja con el alto del header principal */
+  background-color: var(--fondo-card);
+  color: var(--texto-secundario);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  z-index: 10;
+  box-shadow: 0 1px 0 var(--borde);
+}
+
+table tbody td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--borde);
+  color: var(--texto);
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================
+   BADGES DE ESTADO Y DESVIACIÓN
+   ========================================== */
+.badge-desviacion,
+.badge-critico {
+  background-color: var(--critico-suave);
+  color: var(--critico-texto);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-ok {
+  background-color: var(--ok-suave);
+  color: var(--ok);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   MÉTRICAS DESTACADAS
+   ========================================== */
+.kpi-numero {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--marca-navy-suave);
+  line-height: 1.2;
+}
+
+.kpi-label {
+  font-size: 0.875rem;
+  color: var(--texto-secundario);
+}
+
+/* ==========================================
+   UTILIDADES PARA LECTOR DE PANTALLA
+   ========================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

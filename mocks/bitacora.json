@@ -1,0 +1,38 @@
+[
+  {
+    "id": "B0001",
+    "fecha": "2026-11-06T14:32:00-03:00",
+    "id_profesional": "P0123",
+    "campo": "horas_semanales",
+    "valor_anterior": 44,
+    "valor_nuevo": 42,
+    "vigencia_desde": "2026-05-01",
+    "tipo": "cambio_jornada",
+    "quien": "Reporte BUK (lote BUK_2026-11-07_01)",
+    "por_que": "Cambio legal de jornada de 44 a 42 horas desde mayo 2026"
+  },
+  {
+    "id": "B0002",
+    "fecha": "2026-11-06T14:33:10-03:00",
+    "id_profesional": "P0789",
+    "campo": "asignacion_especial",
+    "valor_anterior": null,
+    "valor_nuevo": "Tutor docente (1h)",
+    "vigencia_desde": "2026-05-01",
+    "tipo": "cambio_asignacion",
+    "quien": "Jefatura Santiago",
+    "por_que": "Nueva asignación de tutoría aprobada por dirección nacional"
+  },
+  {
+    "id": "B0003",
+    "fecha": "2026-11-05T09:10:00-03:00",
+    "id_profesional": "P1213",
+    "campo": "cargo",
+    "valor_anterior": "Fonoaudiólogo (reemplazo)",
+    "valor_nuevo": "Fonoaudiólogo (titular)",
+    "vigencia_desde": "2026-05-01",
+    "tipo": "cambio_cargo",
+    "quien": "Reporte BUK (lote BUK_2026-11-05_01)",
+    "por_que": "Fin de reemplazo, titular retoma funciones"
+  }
+]

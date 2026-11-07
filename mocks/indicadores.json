@@ -1,0 +1,21 @@
+{
+  "nacional": {
+    "mes": "2026-05",
+    "meta_gestion_total": 936,
+    "foja_promedio": 0.61,
+    "instituciones": [
+      { "instituto": "Santiago", "meta_gestion": 297, "foja": 0.6 },
+      { "instituto": "Concepción", "meta_gestion": 189, "foja": 0.63 },
+      { "instituto": "Arica", "meta_gestion": 279, "foja": 0.6 },
+      { "instituto": "Ñuble", "meta_gestion": 180, "foja": 0.62 }
+    ]
+  },
+  "por_profesional": {
+    "P0123": { "mes": "2026-05", "meta_gestion": 162, "foja": 0.595 },
+    "P0456": { "mes": "2026-05", "meta_gestion": 126, "foja": 0.633 },
+    "P0789": { "mes": "2026-05", "meta_gestion": 85.5, "foja": 0.636 },
+    "P1011": { "mes": "2026-05", "meta_gestion": 279, "foja": 0.6 },
+    "P1213": { "mes": "2026-05", "meta_gestion": 180, "foja": 0.619 },
+    "P1415": { "mes": "2026-05", "meta_gestion": 135, "foja": 0.579 }
+  }
+}

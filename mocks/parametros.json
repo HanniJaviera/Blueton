@@ -1,0 +1,45 @@
+{
+  "distribucion_por_cargo_tramo": [
+    { "cargo": "Kinesiólogo", "tramo": "40+", "pct_directo": 0.6, "pct_indirecto": 0.25, "pct_nas": 0.15 },
+    { "cargo": "Kinesiólogo", "tramo": "22-40", "pct_directo": 0.58, "pct_indirecto": 0.26, "pct_nas": 0.16 },
+    { "cargo": "Kinesiólogo", "tramo": "<22", "pct_directo": 0.55, "pct_indirecto": 0.3, "pct_nas": 0.15 },
+    { "cargo": "Terapeuta Ocupacional", "tramo": "22-40", "pct_directo": 0.63, "pct_indirecto": 0.27, "pct_nas": 0.1 },
+    { "cargo": "Psicólogo", "tramo": "<22", "pct_directo": 0.64, "pct_indirecto": 0.27, "pct_nas": 0.09 },
+    { "cargo": "Educador", "tramo": "40+", "pct_directo": 0.6, "pct_indirecto": 0.23, "pct_nas": 0.17 },
+    { "cargo": "Fonoaudiólogo", "tramo": "40+", "pct_directo": 0.62, "pct_indirecto": 0.24, "pct_nas": 0.14 },
+    { "cargo": "Asistente Social", "tramo": "<22", "pct_directo": 0.6, "pct_indirecto": 0.25, "pct_nas": 0.15 }
+  ],
+  "minutos_estandar": {
+    "directa": { "Kinesiólogo": 40, "Terapeuta Ocupacional": 45, "Psicólogo": 45, "Educador": 45, "Fonoaudiólogo": 30, "Asistente Social": 60 },
+    "indirecta": 30
+  },
+  "asignaciones_especiales": [
+    { "nombre": "Líder de equipo", "horas_semanales": 2, "requiere_autorizacion": false },
+    { "nombre": "Tutor docente", "horas_semanales": 1, "requiere_autorizacion": true },
+    { "nombre": "Comité paritario", "horas_semanales": 0.5, "requiere_autorizacion": false },
+    { "nombre": "Reunión sindical", "horas_semanales": 0.25, "requiere_autorizacion": false }
+  ],
+  "max_asignaciones_sobre_30h": 2,
+  "calendario": {
+    "feriados_regionales": [
+      { "region": "Arica y Parinacota", "fecha": "2026-06-07", "descripcion": "Asalto y Toma del Morro de Arica" },
+      { "region": "Ñuble", "fecha": "2026-08-20", "descripcion": "Aniversario Región de Ñuble" }
+    ],
+    "vacaciones_por_zona": {
+      "default": { "dias_anuales": 15 },
+      "Aysén": { "dias_anuales": 20 }
+    }
+  },
+  "pct_grupal_por_area": {
+    "Educación": { "Santiago/Concepción": 0.4, "otros": 0.3 },
+    "Asistente Social": { "Santiago/Concepción": 0.3, "otros": 0.25 },
+    "Arte": { "Santiago/Concepción": 0.5, "otros": 0.4 },
+    "Deporte": { "Santiago/Concepción": 0.5, "otros": 0.4 },
+    "Unidad Laboral": { "Santiago/Concepción": 0.35, "otros": 0.3 }
+  },
+  "pacientes_por_grupo": {
+    "Santiago/Concepción": 6,
+    "otros": 4
+  },
+  "pct_meta": 0.9
+}
