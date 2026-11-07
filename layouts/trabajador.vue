@@ -10,8 +10,9 @@
       </div>
 
       <div class="acciones">
-        <NuxtLink v-if="rol === 'admin'" to="/nacional" class="volver-admin">← Volver al administrador</NuxtLink>
+        <NuxtLink v-if="rol === 'admin'" to="/graficos" class="volver-admin">← Volver al administrador</NuxtLink>
         <button type="button" class="salir" @click="salir">Salir</button>
+        <IconosMarca />
       </div>
     </header>
 
@@ -118,5 +119,14 @@ const { rol, salir } = useRol()
   max-width: 1100px;
   margin: 0 auto;
   padding: 1.5rem;
+}
+/* Celular: la barra se acomoda en varias líneas y no se sale de la pantalla */
+@media (max-width: 760px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+  .app-title-badge {
+    display: none;
+  }
 }
 </style>

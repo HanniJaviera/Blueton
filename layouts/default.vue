@@ -18,11 +18,12 @@
         <BuscadorProfesional />
         <nav aria-label="Navegación principal">
           <NuxtLink to="/" class="inicio">Inicio</NuxtLink>
-          <NuxtLink to="/nacional">Nacional</NuxtLink>
           <NuxtLink to="/graficos">Gráficos</NuxtLink>
+          <NuxtLink to="/nacional">Nacional</NuxtLink>
           <NuxtLink to="/mi-planificacion">Mi planificación</NuxtLink>
           <NuxtLink to="/parametros">Parámetros</NuxtLink>
         </nav>
+        <IconosMarca class="iconos-header" />
       </div>
     </header>
 
@@ -150,5 +151,29 @@ nav a.router-link-active {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+}
+/* Celular: la barra se acomoda en varias líneas y no se sale de la pantalla */
+@media (max-width: 760px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0.75rem 1rem;
+  }
+  .app-title-badge {
+    display: none;
+  }
+  .derecha {
+    width: 100%;
+    justify-content: space-between;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.9rem;
+  }
+  nav a {
+    margin-left: 0;
+    font-size: 0.88rem;
+  }
 }
 </style>

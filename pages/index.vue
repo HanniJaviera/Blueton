@@ -24,10 +24,10 @@
         <p class="bajada">¿Cómo quieres entrar?</p>
 
         <nav class="opciones" aria-label="Elegir tipo de acceso">
-          <NuxtLink to="/nacional" class="opcion" @click="elegir('admin')">
+          <NuxtLink to="/graficos" class="opcion" @click="elegir('admin')">
             <span class="icono" aria-hidden="true">📊</span>
             <span class="titulo">Administrador</span>
-            <span class="detalle">Vista nacional, institutos, profesionales, bitácora y parámetros</span>
+            <span class="detalle">Gráficos de los KPIs, vista nacional, institutos, profesionales, bitácora y parámetros</span>
           </NuxtLink>
           <NuxtLink to="/mi-planificacion" class="opcion" @click="elegir('trabajador')">
             <span class="icono" aria-hidden="true">🩺</span>
