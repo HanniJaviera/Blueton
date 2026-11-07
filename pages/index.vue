@@ -21,6 +21,32 @@
       <main id="contenido" class="centro">
         <p class="sobre">Botathon 2026 · Teletón «Cada hora cuenta»</p>
         <h1>Planificación Asistencial</h1>
+        <p v-if="errorLogin" class="error-login" role="alert">{{ errorLogin }}</p>
+
+        <!-- Paso 1: iniciar sesión (solo si hay client IDs configurados) -->
+        <template v-if="requiereLogin && !usuario">
+          <p class="bajada">Inicia sesión para continuar</p>
+          <div class="logins">
+            <button v-if="disponible('google')" type="button" class="btn-login" @click="entrar('google')">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.9 6.1C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.7 6c4.5-4.2 6.9-10.3 6.9-17.7z"/><path fill="#FBBC05" d="M10.6 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.7-6c-2.2 1.5-5 2.3-8.2 2.3-6.2 0-11.5-4.1-13.4-9.9l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>
+              Continuar con Google
+            </button>
+            <button v-if="disponible('microsoft')" type="button" class="btn-login" @click="entrar('microsoft')">
+              <svg viewBox="0 0 23 23" aria-hidden="true"><path fill="#F35325" d="M1 1h10v10H1z"/><path fill="#81BC06" d="M12 1h10v10H12z"/><path fill="#05A6F0" d="M1 12h10v10H1z"/><path fill="#FFBA08" d="M12 12h10v10H12z"/></svg>
+              Continuar con Microsoft
+            </button>
+          </div>
+          <p v-if="dominios.length" class="nota-dominio">
+            Solo cuentas {{ dominios.map((d) => '@' + d).join(' o ') }}
+          </p>
+        </template>
+
+        <!-- Paso 2: elegir rol -->
+        <template v-else>
+        <p v-if="usuario" class="conectado">
+          Conectado como <strong>{{ usuario.nombre }}</strong> ({{ usuario.correo }})
+          · <button type="button" class="link-salir" @click="cerrar">Cerrar sesión</button>
+        </p>
         <p class="bajada">¿Cómo quieres entrar?</p>
 
         <nav class="opciones" aria-label="Elegir tipo de acceso">
@@ -35,6 +61,7 @@
             <span class="detalle">Mi meta de atenciones del mes y de dónde sale, explicado en simple</span>
           </NuxtLink>
         </nav>
+        </template>
       </main>
 
       <aside class="lado-logo lado-der">
@@ -52,6 +79,11 @@
 // Pantalla de inicio: sin el layout de administración (barra con buscador y menú).
 definePageMeta({ layout: false })
 const { elegir } = useRol()
+const { usuario, dominios, disponible, requiereLogin, entrar, procesarRetorno, cerrar } = useSesion()
+const errorLogin = ref<string | null>(null)
+onMounted(() => {
+  errorLogin.value = procesarRetorno()
+})
 useHead({ title: 'Bluetón · Planificación Asistencial' })
 </script>
 
@@ -156,6 +188,49 @@ h1 {
   margin: 0 0 2.25rem;
   font-size: 1.2rem;
   opacity: 0.95;
+}
+.logins {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: min(320px, 100%);
+}
+.btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.25rem;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  background: #ffffff;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(11, 14, 38, 0.25);
+  cursor: pointer;
+}
+.btn-login:hover { box-shadow: 0 12px 28px rgba(11, 14, 38, 0.35); }
+.btn-login:focus-visible { outline: 4px solid var(--marca-dorado); outline-offset: 3px; }
+.btn-login svg { width: 22px; height: 22px; }
+.nota-dominio, .conectado { margin: 1rem 0 0; font-size: 0.95rem; opacity: 0.95; }
+.conectado { margin: 0 0 0.75rem; }
+.link-salir {
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.error-login {
+  margin: 0 0 1rem;
+  padding: 0.6rem 1rem;
+  max-width: 44ch;
+  background: rgba(11, 14, 38, 0.55);
+  border-radius: 10px;
 }
 .opciones {
   display: flex;

@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       // Uso: `${blobUrl}/planificacion.json?${blobSas}`
       blobUrl: '',
       blobSas: '',
+      // Inicio de sesión (ver composables/useSesion.ts). Sin client IDs = modo demo sin login.
+      googleClientId: '',
+      msClientId: '',
+      msTenant: 'common',
+      dominiosPermitidos: '',
     },
   },
 

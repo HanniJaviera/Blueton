@@ -16,6 +16,7 @@ export function useRol() {
   function salir() {
     rol.value = null
     miId.value = null
+    useSesion().cerrar()
     return navigateTo('/')
   }
   return { rol, miId, elegir, salir }

@@ -1,11 +1,15 @@
 // Controla qué páginas puede ver cada rol.
-// - Sin rol: solo la pantalla de inicio (elige Administrador o Trabajador).
+// - Sin sesión (si hay login configurado) o sin rol: solo la pantalla de inicio.
 // - Trabajador: solo /mi-planificacion, y únicamente con su propio ID.
 // - Administrador: todo.
 export default defineNuxtRouteMiddleware((to) => {
   const { rol, miId } = useRol()
 
   if (to.path === '/') return
+
+  // Con login configurado, sin sesión no se pasa de la portada.
+  const { usuario, requiereLogin } = useSesion()
+  if (requiereLogin.value && !usuario.value) return navigateTo('/')
 
   if (!rol.value) return navigateTo('/')
 
