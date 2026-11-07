@@ -1,5 +1,5 @@
 <template>
-  <div class="tabla-wrap">
+  <div class="tabla-wrap" tabindex="0" :aria-label="`${titulo} (se puede desplazar)`">
     <table>
       <caption class="sr-only">{{ titulo }}</caption>
       <thead>
@@ -56,10 +56,17 @@ defineProps<{
 
 <style scoped>
 .tabla-wrap {
-  overflow-x: auto;
+  overflow: auto; /* lista larga: scroll dentro de la tabla, con encabezado fijo */
+  max-height: 32rem;
+  overscroll-behavior: contain;
   background: var(--fondo-card);
   border: 1px solid var(--borde);
   border-radius: 10px;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 table {
   width: 100%;
@@ -92,7 +99,9 @@ a {
 /* Teléfono: cada fila pasa a ser una tarjeta con sus datos rotulados (sin scroll lateral) */
 @media (max-width: 600px) {
   .tabla-wrap {
-    overflow-x: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 70vh; /* tarjetas: también con scroll propio */
     background: transparent;
     border: none;
   }

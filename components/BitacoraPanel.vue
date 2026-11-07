@@ -1,9 +1,9 @@
 <template>
   <section class="bitacora" aria-labelledby="bitacora-titulo">
     <h2 id="bitacora-titulo">Bitácora de cambios</h2>
-    <p class="subtitulo">Quién, qué, cuándo y por qué.</p>
+    <p class="subtitulo">Quién, qué, cuándo y por qué.<template v-if="eventos.length"> · {{ eventos.length }} cambios</template></p>
 
-    <ol class="lista">
+    <ol class="lista" tabindex="0" aria-label="Lista de cambios (se puede desplazar)">
       <li v-for="evento in eventos" :key="evento.id" class="item">
         <div class="item-cabecera">
           <span class="tipo">{{ etiquetaTipo(evento.tipo) }}</span>
@@ -67,6 +67,11 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
+  /* Lista larga: scroll dentro del panel en vez de alargar la página */
+  max-height: 26rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  overscroll-behavior: contain;
 }
 .item {
   border-left: 3px solid var(--acento-fuerte);
