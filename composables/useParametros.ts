@@ -1,18 +1,16 @@
-// Lee y edita las reglas parametrizables (% por cargo/tramo, minutos
-// estándar, asignaciones especiales, calendario, % grupal, % de meta)
-// sin tocar código — requisito obligatorio del desafío.
-export function useParametros() {
-  const config = useRuntimeConfig()
+// Reglas parametrizables, de SOLO LECTURA en el dashboard: se editan en
+// Parametros.xlsx, que lee Blue Prism (no hay API para guardarlas).
+// ponytail: muestra la copia en mocks/parametros.json; si Blue Prism sube
+// un parametros.json al blob, basta con leerlo aquí con useDatosBlob.
+import parametros from '~/mocks/parametros.json'
 
+export function useParametros() {
   async function obtener() {
-    return $fetch<any>(`${config.public.apiBase}/parametros`)
+    return structuredClone(parametros) as any
   }
 
-  async function guardar(parametros: any) {
-    return $fetch<{ ok: boolean }>(`${config.public.apiBase}/parametros`, {
-      method: 'PUT',
-      body: parametros,
-    })
+  async function guardar(_parametros: any): Promise<{ ok: boolean }> {
+    throw new Error('Las reglas se editan en Parametros.xlsx, que lee Blue Prism.')
   }
 
   return { obtener, guardar }

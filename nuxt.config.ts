@@ -11,6 +11,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api',
+      // Blob de Azure: URL del contenedor y SAS de lectura (sin el "?").
+      // Se llenan desde .env (NUXT_PUBLIC_BLOB_URL / NUXT_PUBLIC_BLOB_SAS).
+      // Uso: `${blobUrl}/planificacion.json?${blobSas}`
+      blobUrl: '',
+      blobSas: '',
     },
   },
 

@@ -88,8 +88,8 @@ async function guardarCambios() {
   try {
     await guardar(params.value)
     mensaje.value = 'Cambios guardados.'
-  } catch {
-    mensaje.value = 'No se pudo guardar. Intenta de nuevo.'
+  } catch (e: any) {
+    mensaje.value = e?.message || 'No se pudo guardar. Intenta de nuevo.'
   } finally {
     guardando.value = false
   }

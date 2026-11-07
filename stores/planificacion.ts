@@ -15,7 +15,7 @@ export interface FilaPlanificacion {
   horas_indirecta: number
   horas_nas: number
   meta_atenciones: number
-  atenciones_sic: number
+  atenciones_sic: number | null // null: el kit no trae SIC
 }
 
 export interface EventoBitacora {
@@ -50,6 +50,7 @@ export const usePlanificacionStore = defineStore('planificacion', {
     // Desviación planificado vs SIC, para la alerta.
     desviaciones: (state) =>
       state.filas
+        .filter((f) => f.atenciones_sic != null)
         .map((f) => ({
           ...f,
           desviacion_pct: f.meta_atenciones

@@ -114,27 +114,24 @@
 
 <script setup lang="ts">
 import type { FilaPlanificacion, EventoBitacora } from '~/stores/planificacion'
-import type { IndicadorNacional } from '~/composables/useIndicadores'
+import { calcularIndicadores } from '~/composables/useIndicadores'
 
-const config = useRuntimeConfig()
 const filas = ref<FilaPlanificacion[]>([])
 const bitacora = ref<EventoBitacora[]>([])
-const indicadores = ref<IndicadorNacional | null>(null)
 const cargando = ref(true)
 const error = ref<string | null>(null)
 const mes = ref('')
 const instituto = ref('')
+// Indicadores del mes elegido, calculados desde planificacion.json.
+const indicadores = computed(() =>
+  filas.value.length ? calcularIndicadores(filas.value.filter((f) => f.mes === mes.value), mes.value) : null
+)
 
 onMounted(async () => {
   try {
-    const [f, b, i] = await Promise.all([
-      $fetch<FilaPlanificacion[]>(`${config.public.apiBase}/planificacion`),
-      $fetch<EventoBitacora[]>(`${config.public.apiBase}/bitacora`).catch(() => []),
-      $fetch<IndicadorNacional>(`${config.public.apiBase}/indicadores`).catch(() => null),
-    ])
-    filas.value = Array.isArray(f) ? f : []
-    bitacora.value = Array.isArray(b) ? b : []
-    indicadores.value = i
+    const datos = await useDatosBlob().cargarDatos()
+    filas.value = datos.filas
+    bitacora.value = datos.bitacora
     mes.value = mesesDisponibles.value[mesesDisponibles.value.length - 1] || ''
   } catch (e: any) {
     error.value = e?.message || 'No se pudieron cargar los datos.'
@@ -159,7 +156,7 @@ const filasMes = computed(() =>
 )
 
 const totMeta = computed(() => filasMes.value.reduce((a, f) => a + f.meta_atenciones, 0))
-const totRealizado = computed(() => filasMes.value.reduce((a, f) => a + f.atenciones_sic, 0))
+const totRealizado = computed(() => filasMes.value.reduce((a, f) => a + (f.atenciones_sic ?? 0), 0))
 const cumplimiento = computed(() => (totMeta.value ? totRealizado.value / totMeta.value : 0))
 
 const foja = computed(() => {
@@ -181,7 +178,7 @@ const profesionales = computed(() => {
   for (const f of filasMes.value) {
     const p = m.get(f.id_profesional) || { nombre: f.nombre, meta: 0, real: 0 }
     p.meta += f.meta_atenciones
-    p.real += f.atenciones_sic
+    p.real += f.atenciones_sic ?? 0
     m.set(f.id_profesional, p)
   }
   return [...m.values()].map((p) => ({ ...p, c: p.meta ? p.real / p.meta : 0 }))
@@ -193,7 +190,7 @@ const porInstituto = computed(() => {
   for (const f of filasMes.value) {
     const g = m.get(f.instituto) || { label: f.instituto, meta: 0, realizado: 0 }
     g.meta += f.meta_atenciones
-    g.realizado += f.atenciones_sic
+    g.realizado += f.atenciones_sic ?? 0
     m.set(f.instituto, g)
   }
   return [...m.values()].sort((a, b) => a.realizado / a.meta - b.realizado / b.meta)
