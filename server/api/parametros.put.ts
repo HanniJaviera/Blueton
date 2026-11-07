@@ -20,6 +20,16 @@ export default defineEventHandler(async (event) => {
   if (!parametros || !Array.isArray(parametros.distribucion) || !parametros.jornada_meta) {
     throw createError({ statusCode: 400, statusMessage: 'Parámetros con formato inválido.' })
   }
+  // Cada tramo suma 100% (o 0% = no definido); un ajuste por persona, siempre 100%.
+  const suma = (t: any) => (Number(t?.dir) || 0) + (Number(t?.ind) || 0) + (Number(t?.nas) || 0)
+  const ok = (t: any, vacio = true) => Math.abs(suma(t) - 1) <= 0.001 || (vacio && suma(t) === 0)
+  const malos = [
+    ...parametros.distribucion.flatMap((d: any) => (['alto', 'medio', 'bajo'] as const).filter((t) => !ok(d[t])).map((t) => `${d.cargo} (${t})`)),
+    ...(parametros.ajustes ?? []).filter((a: any) => a.campo === 'distribucion' && !ok(a.valor, false)).map((a: any) => `ajuste ${a.id_profesional}`),
+  ]
+  if (malos.length) {
+    throw createError({ statusCode: 400, statusMessage: `No suman 100%: ${malos.slice(0, 3).join(', ')}${malos.length > 3 ? '…' : ''}` })
+  }
   if (!String(por_que || '').trim()) {
     throw createError({ statusCode: 400, statusMessage: 'Indica por qué haces el cambio.' })
   }

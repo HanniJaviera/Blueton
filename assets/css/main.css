@@ -37,6 +37,12 @@
   box-sizing: border-box;
 }
 
+/* Letra base 18 px (112,5% de 16 px): todo lo que usa rem crece en proporción.
+   En % y no en px para respetar a quien agrandó la letra en su navegador. */
+html {
+  font-size: 112.5%;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;

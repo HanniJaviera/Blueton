@@ -86,7 +86,7 @@
             </tbody>
           </table>
         </div>
-        <p class="nota">En rojo: el tramo no suma 100%.</p>
+        <p class="nota">Cada tramo debe sumar 100% (o quedar en 0% si no aplica a ese cargo). En rojo: no suma 100%.</p>
       </section>
 
       <!-- 3. Asignaciones especiales -->
@@ -249,11 +249,18 @@
             <li v-if="cambios.length > 50">… y {{ cambios.length - 50 }} más</li>
           </ul>
         </details>
+        <div v-if="erroresSuma.length" class="bloqueo" role="alert">
+          <strong>No se puede guardar: {{ erroresSuma.length === 1 ? 'un tramo no suma' : `${erroresSuma.length} tramos no suman` }} 100%.</strong>
+          <ul>
+            <li v-for="e in erroresSuma.slice(0, 5)" :key="e">{{ e }}</li>
+            <li v-if="erroresSuma.length > 5">… y {{ erroresSuma.length - 5 }} más</li>
+          </ul>
+        </div>
         <label class="ancho" for="motivo">¿Por qué haces este cambio? (queda en la bitácora)</label>
         <textarea id="motivo" v-model="motivo" rows="2" placeholder="Ej. Ajuste de minutos estándar acordado con Dirección Médica Nacional"></textarea>
         <div class="acciones">
           <label>Clave de administrador <input type="password" v-model="clave" autocomplete="current-password" /></label>
-          <button type="button" @click="guardarCambios" :disabled="guardando || !cambios.length || !motivo.trim()">
+          <button type="button" @click="guardarCambios" :disabled="guardando || !cambios.length || !motivo.trim() || erroresSuma.length > 0">
             {{ guardando ? 'Guardando…' : 'Guardar y recalcular' }}
           </button>
           <button type="button" class="secundario" @click="descartar" :disabled="!cambios.length || guardando">Descartar</button>
@@ -337,7 +344,28 @@ const pct = (x: number) => Math.round((Number(x) || 0) * 1000) / 10
 function setPct(obj: any, k: string, ev: Event) {
   obj[k] = Number((ev.target as HTMLInputElement).value) / 100
 }
-const sumaMal = (t: any) => Math.abs((t.dir || 0) + (t.ind || 0) + (t.nas || 0) - 1) > 0.001
+// Un tramo debe sumar 100%, o estar todo en 0 (= tramo no definido para ese cargo, como en la planilla).
+const sumaTramo = (t: any) => (Number(t?.dir) || 0) + (Number(t?.ind) || 0) + (Number(t?.nas) || 0)
+const sumaMal = (t: any, permitirVacio = true) => {
+  const s = sumaTramo(t)
+  return !(Math.abs(s - 1) <= 0.001 || (permitirVacio && s === 0))
+}
+const erroresSuma = computed(() => {
+  if (!params.value) return []
+  const nombre: Record<string, string> = {
+    alto: `≥ ${params.value.tramos.alto_desde} h`,
+    medio: `${params.value.tramos.medio_desde}–${params.value.tramos.alto_desde} h`,
+    bajo: `< ${params.value.tramos.medio_desde} h`,
+  }
+  const errores: string[] = []
+  for (const d of params.value.distribucion) {
+    for (const t of TRAMOS) if (sumaMal(d[t])) errores.push(`${d.cargo}, tramo ${nombre[t]}: suma ${pct(sumaTramo(d[t]))}%`)
+  }
+  for (const a of params.value.ajustes) {
+    if (a.campo === 'distribucion' && sumaMal(a.valor, false)) errores.push(`Ajuste de ${a.id_profesional}: suma ${pct(sumaTramo(a.valor))}%`)
+  }
+  return errores
+})
 function quitarFeriado(f: any) {
   const lista = params.value.calendario.feriados
   lista.splice(lista.indexOf(f), 1)
@@ -386,6 +414,11 @@ const fechaHora = (s: string) => new Date(s).toLocaleString('es-CL', { dateStyle
 .intro { color: var(--texto-secundario); max-width: 70ch; }
 .origen { font-size: 0.85rem; color: var(--texto-secundario); margin: 0 0 1rem; }
 .error { color: var(--critico); font-weight: 600; }
+.bloqueo {
+  background: var(--critico-suave); color: var(--critico-texto); border-radius: 8px;
+  padding: 0.75rem 1rem; margin-bottom: 0.75rem; max-width: 70ch;
+}
+.bloqueo ul { margin: 0.4rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
 .aviso {
   background: var(--fondo-card); border: 1px solid var(--borde); border-left: 4px solid var(--alerta);
   border-radius: 10px; padding: 0.75rem 1.25rem; margin-bottom: 1rem; max-width: 70ch;

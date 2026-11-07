@@ -10,7 +10,7 @@ num = lambda v: float(v) if isinstance(v, (int, float)) else 0.0
 dist_ws = [w for w in wb.worksheets if w.title.startswith('Distribucion_NAC')][0]
 distribucion, asignaciones = [], []
 for r in rows(dist_ws, 7, 195):
-    if g(r,'B'):
+    if g(r,'B') and str(g(r,'B')).strip().upper() != 'CARGO':  # salta el encabezado repetido en la hoja
         distribucion.append({
             'cargo': str(g(r,'B')).strip(), 'esp': g(r,'A') or '', 'unidad': g(r,'C') or '',
             'min_dir': num(g(r,'D')), 'min_ind': num(g(r,'E')),

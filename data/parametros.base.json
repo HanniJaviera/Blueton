@@ -1900,28 +1900,6 @@
    }
   },
   {
-   "cargo": "Cargo",
-   "esp": "",
-   "unidad": "Unidad",
-   "min_dir": 0.0,
-   "min_ind": 0.0,
-   "alto": {
-    "dir": 0.0,
-    "ind": 0.0,
-    "nas": 0.0
-   },
-   "medio": {
-    "dir": 0.0,
-    "ind": 0.0,
-    "nas": 0.0
-   },
-   "bajo": {
-    "dir": 0.0,
-    "ind": 0.0,
-    "nas": 0.0
-   }
-  },
-  {
    "cargo": "MEDICO NEUROCIRUJANO",
    "esp": "",
    "unidad": "NEUROLOGÍA",
