@@ -40,15 +40,34 @@ Abre `http://localhost:3000`.
 Por defecto usa datos **mock** servidos por este mismo proyecto (`server/api/*`, leyendo de
 `mocks/*.json`) — no necesitas backend ni red hacia la VM para desarrollar.
 
-## Conectar la API real
+## Datos reales (Azure Blob) e inicio de sesión
 
-Cuando el backend de Samuel (FastAPI) esté corriendo en la VM:
+Blue Prism sube `planificacion.json` y `bitacora.json` al Blob; el dashboard los descarga una vez
+(`composables/useDatosBlob.ts`) y filtra/suma en el navegador. Ya no hay API.
 
-1. Copia `.env.example` a `.env`.
-2. Pon `NUXT_PUBLIC_API_BASE=http://<ip-vm>:8000`.
-3. Reinicia `npm run dev` (o build/deploy en la VM).
+1. Copia `.env.example` a `.env` y llena las variables (los valores los tiene Samuel; **no van al repo**).
+2. Reinicia `npm run dev`.
 
-No hay que tocar ningún componente, store ni composable — todos usan `runtimeConfig.public.apiBase`.
+| Variable | Qué es |
+|---|---|
+| `NUXT_PUBLIC_BLOB_URL` | URL del contenedor (lo que va antes del `?` en la SAS de lectura) |
+| `NUXT_PUBLIC_BLOB_SAS` | SAS de lectura (lo que va después del `?`) |
+| `NUXT_PUBLIC_GOOGLE_CLIENT_ID` | ID de cliente OAuth de Google |
+| `NUXT_PUBLIC_MS_CLIENT_ID` | Application (client) ID de Microsoft |
+| `NUXT_PUBLIC_MS_TENANT` | `common` (cuentas personales y de empresa) |
+
+Sin `BLOB_URL` usa los mocks; sin client IDs no pide login (modo demo).
+
+## Publicar en Vercel
+
+1. vercel.com → **Add New → Project** → importa `HanniJaviera/Blueton` (detecta Nuxt solo; no cambies build ni output).
+2. Antes de *Deploy*, en **Environment Variables** agrega las 5 variables de la tabla de arriba.
+3. **Deploy.** Cada push a `main` se vuelve a publicar solo.
+4. Con la URL final (`https://<proyecto>.vercel.app/`), agrégala **con la `/` final** en:
+   - Google Cloud → *Clientes* → orígenes de JavaScript (sin `/`) y URI de redireccionamiento (con `/`).
+   - Azure → *App registrations* → Blueton → *Authentication* → Redirect URIs (plataforma Web).
+
+Si cambias una variable en Vercel, haz *Redeploy* para que se aplique.
 
 ## Estructura
 
