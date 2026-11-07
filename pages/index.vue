@@ -1,14 +1,20 @@
 <template>
   <div class="inicio">
-    <header class="marca">
-      <img src="/Logo_DuocUC.svg.webp" alt="Duoc UC" class="logo logo-duoc" />
-      <span class="divisor" aria-hidden="true"></span>
-      <img src="/ssc-blueprism-logo-white.webp" alt="SS&C Blue Prism" class="logo" />
+    <header class="barra-sup">
+      <div class="marca">
+        <img src="/Logo_DuocUC.svg.webp" alt="Duoc UC" class="logo logo-duoc" />
+        <span class="divisor" aria-hidden="true"></span>
+        <img src="/ssc-blueprism-logo-white.webp" alt="SS&C Blue Prism" class="logo" />
+      </div>
+      <div class="marca">
+        <span class="chip-logo"><img src="/logo-teleton-cruz.png" alt="Teletón" /></span>
+        <span class="chip-logo"><img src="/icono-blueton.png" alt="Bluetón" /></span>
+      </div>
     </header>
 
-    <!-- 3 columnas: logo | botones (centro exacto de la página) | espacio -->
+    <!-- 3 columnas: logo Teletón | botones (centro exacto de la página) | logo Bluetón -->
     <div class="cuerpo">
-      <aside class="lado-logo">
+      <aside class="lado-logo lado-izq">
         <img src="/logo-teleton.png" alt="Teletón" class="logo-teleton" />
       </aside>
 
@@ -31,7 +37,11 @@
         </nav>
       </main>
 
-      <div class="lado-vacio" aria-hidden="true"></div>
+      <aside class="lado-logo lado-der">
+        <div class="tarjeta-logo">
+          <img src="/logo-blueton.png" alt="Bluetón" class="logo-blueton" />
+        </div>
+      </aside>
     </div>
 
     <footer class="pie">Equipo 6 · Duoc UC × SS&amp;C Blue Prism</footer>
@@ -42,7 +52,7 @@
 // Pantalla de inicio: sin el layout de administración (barra con buscador y menú).
 definePageMeta({ layout: false })
 const { elegir } = useRol()
-useHead({ title: 'Inicio · Planificación Asistencial Teletón' })
+useHead({ title: 'Bluetón · Planificación Asistencial' })
 </script>
 
 <style scoped>
@@ -55,11 +65,33 @@ useHead({ title: 'Inicio · Planificación Asistencial Teletón' })
     radial-gradient(1200px 600px at 50% -10%, rgba(255, 255, 255, 0.14), transparent 60%),
     linear-gradient(160deg, #e11d48 0%, #be123c 55%, #0b0e26 140%);
 }
+.barra-sup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+}
 .marca {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  padding: 1.25rem 1.75rem;
+}
+/* íconos de la esquina derecha: círculo blanco para que el rojo no se pierda sobre el fondo */
+.chip-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(11, 14, 38, 0.25);
+}
+.chip-logo img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
 }
 .logo {
   height: 26px;
@@ -88,7 +120,19 @@ useHead({ title: 'Inicio · Planificación Asistencial Teletón' })
   align-items: center;
 }
 .logo-teleton {
-  width: min(300px, 100%);
+  width: min(260px, 100%);
+  height: auto;
+}
+.tarjeta-logo {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 12px 30px rgba(11, 14, 38, 0.28);
+  width: min(320px, 100%);
+}
+.logo-blueton {
+  display: block;
+  width: 100%;
   height: auto;
 }
 .centro {
@@ -165,15 +209,53 @@ h1 {
 }
 /* Pantallas medianas y celular: logo arriba, botones debajo */
 @media (max-width: 1100px) {
+  /* pantallas angostas: los dos logos arriba, lado a lado, y los botones debajo */
   .cuerpo {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
   }
-  .lado-vacio {
-    display: none;
+  .lado-izq {
+    order: 1;
+    justify-content: flex-end;
+  }
+  .lado-der {
+    order: 2;
+    justify-content: flex-start;
+  }
+  .centro {
+    order: 3;
+    grid-column: 1 / -1;
   }
   .logo-teleton {
+    width: 120px;
+  }
+  .tarjeta-logo {
     width: 140px;
+    padding: 0.8rem;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .barra-sup {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  .marca {
+    gap: 0.5rem;
+  }
+  .logo {
+    height: 18px;
+  }
+  .logo-duoc {
+    height: 20px;
+  }
+  .chip-logo {
+    width: 34px;
+    height: 34px;
+  }
+  .chip-logo img {
+    width: 26px;
+    height: 26px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
