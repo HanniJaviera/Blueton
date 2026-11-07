@@ -43,6 +43,40 @@ html {
   font-size: 112.5%;
 }
 
+/* Opción "Letra grande" (botón en la barra): base 21 px. */
+html.letra-grande {
+  font-size: 131.25%;
+}
+
+/* Opción "Alto contraste": blanco y negro puros, bordes marcados, estados más intensos. */
+html.alto-contraste {
+  --fondo: #ffffff;
+  --fondo-card: #ffffff;
+  --texto: #000000;
+  --texto-secundario: #1f1f1f;
+  --borde: #1f1f1f;
+  --acento-suave: #ffffff;
+  --marca-navy-suave: #000a3d;
+  --marca-rojo: #a1001f;
+  --ok: #00663a;
+  --ok-suave: #ffffff;
+  --alerta: #8a4500;
+  --alerta-suave: #ffffff;
+  --critico: #a1001f;
+  --critico-suave: #ffffff;
+  --critico-texto: #a1001f;
+}
+html.alto-contraste a {
+  text-decoration: underline;
+}
+html.alto-contraste .header {
+  background: #8f001b !important;
+}
+html.alto-contraste :focus-visible {
+  outline: 3px solid #000000 !important;
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;

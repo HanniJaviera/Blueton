@@ -46,7 +46,7 @@ function color(c: number) {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
   gap: 1rem 1.5rem;
 }
 .cab {

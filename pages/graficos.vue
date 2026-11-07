@@ -335,7 +335,7 @@ h1 {
 .dot.critico { background: var(--critico); }
 .kpis {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -384,7 +384,7 @@ h1 {
 }
 .dos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(23.75rem, 1fr));
   gap: 0 1.5rem;
 }
 .simple {

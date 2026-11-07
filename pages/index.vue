@@ -19,6 +19,7 @@
       </aside>
 
       <main id="contenido" class="centro">
+        <OpcionesLectura sobre-color class="lectura-inicio" />
         <p class="sobre">Botathon 2026 · Teletón «Cada hora cuenta»</p>
         <h1>Planificación Asistencial</h1>
         <p v-if="errorLogin" class="error-login" role="alert">{{ errorLogin }}</p>
@@ -188,6 +189,17 @@ h1 {
   margin: 0 0 2.25rem;
   font-size: 1.2rem;
   opacity: 0.95;
+}
+.lectura-inicio {
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+/* Alto contraste en la portada: rojo muy oscuro en vez del degradado */
+:global(html.alto-contraste) .inicio {
+  background: #5c0012;
+}
+:global(html.alto-contraste) .opcion {
+  border: 3px solid #000000;
 }
 .logins {
   display: flex;

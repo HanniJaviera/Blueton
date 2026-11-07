@@ -8,15 +8,10 @@
 
     <template v-else>
       <div class="barra">
-        <h1 id="saludo">
+        <!-- "Leer en voz alta" y "Letra grande" están en las opciones de lectura comunes (layout) -->
+        <h1 id="saludo" data-leer>
           Hola, {{ quien }}<span class="id"> (ID {{ detalle.profesional.persona_id }})</span>
         </h1>
-        <div class="acciones">
-          <button type="button" class="btn" :aria-pressed="leyendo" @click="leer">
-            {{ leyendo ? '⏹ Detener lectura' : '🔊 Leer en voz alta' }}
-          </button>
-          <button type="button" class="btn" :aria-pressed="grande" @click="grande = !grande">A+ Letra grande</button>
-        </div>
       </div>
 
       <!-- Selector de mes -->
@@ -31,7 +26,7 @@
         <button type="button" class="btn flecha" :disabled="mesSel >= 12" aria-label="Mes siguiente" @click="mesSel++">▶</button>
       </nav>
 
-      <div ref="texto" :class="['texto', { grande }]">
+      <div data-leer :class="['texto', { grande }]">
         <!-- Mensaje principal -->
         <section class="principal" aria-labelledby="t-principal">
           <h2 id="t-principal" class="sr-only">Tu meta del mes</h2>
@@ -131,7 +126,6 @@ import { MESES_CORTO, MESES_LARGO, tasaDelMes, type MesDetalle } from '~/composa
 
 definePageMeta({ layout: 'trabajador' })
 const route = useRoute()
-const config = useRuntimeConfig()
 const { rol, salir } = useRol()
 const idProfesional = computed(() => route.params.id as string)
 
@@ -140,14 +134,14 @@ const bitacora = ref<any[]>([])
 
 const mesActual = new Date().getMonth() + 1
 const mesSel = ref(mesActual)
-const grande = ref(false)
+const { letraGrande: grande } = useAccesibilidad() // el mismo botón "Letra grande" de todo el sitio
 
+const { cargarDatos } = useDatosBlob()
 async function recargar() {
   await cargar(idProfesional.value)
   try {
-    bitacora.value = await $fetch<any[]>(`${config.public.apiBase}/bitacora`, {
-      params: { id_profesional: idProfesional.value, persona_id: idProfesional.value },
-    })
+    // La misma bitácora que el resto del sitio (Blob: bitacora.json + cambios de parámetros).
+    bitacora.value = (await cargarDatos()).bitacora.filter((b) => b.id_profesional === idProfesional.value)
   } catch {
     bitacora.value = []
   }
@@ -281,32 +275,9 @@ const avisos = computed(() => {
   return out
 })
 
-/* ---------- lectura en voz alta ---------- */
-const texto = ref<HTMLElement | null>(null)
-const leyendo = ref(false)
-function leer() {
-  if (!('speechSynthesis' in window)) return
-  if (leyendo.value) {
-    window.speechSynthesis.cancel()
-    leyendo.value = false
-    return
-  }
-  const contenido = `${document.getElementById('saludo')?.textContent || ''}. ${texto.value?.innerText || ''}`
-  const u = new SpeechSynthesisUtterance(contenido.replace(/[📅🔔🏖️🩺]/gu, ''))
-  u.lang = 'es-CL'
-  u.rate = 0.95
-  u.onend = () => (leyendo.value = false)
-  leyendo.value = true
-  window.speechSynthesis.speak(u)
-}
-onBeforeUnmount(() => {
-  if (import.meta.client && 'speechSynthesis' in window) window.speechSynthesis.cancel()
-})
+// Si cambia el mes mientras se lee, se corta la lectura (la retoma el botón común).
 watch(mesSel, () => {
-  if (leyendo.value) {
-    window.speechSynthesis.cancel()
-    leyendo.value = false
-  }
+  if (import.meta.client && 'speechSynthesis' in window) window.speechSynthesis.cancel()
 })
 
 useHead({ title: 'Mi planificación · Teletón' })
@@ -336,10 +307,6 @@ h1 .id {
   font-weight: 400;
   font-size: 1rem;
   color: var(--texto-secundario);
-}
-.acciones {
-  display: flex;
-  gap: 0.5rem;
 }
 .btn {
   font: inherit;

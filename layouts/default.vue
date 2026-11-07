@@ -28,6 +28,7 @@
     </header>
 
     <main id="contenido" class="contenido">
+      <OpcionesLectura />
       <slot />
     </main>
   </div>
@@ -146,7 +147,7 @@ nav a.router-link-active {
 .contenido {
   flex: 1;
   width: 100%;
-  max-width: 1100px;
+  max-width: 68.75rem; /* = 1100 px a letra normal; crece con la letra para no comprimir */
   margin: 0 auto;
   padding: 1.5rem;
   display: flex;

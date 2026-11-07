@@ -78,7 +78,7 @@ h2 {
 }
 .params {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 0.6rem 1rem;
   margin: 0 0 1rem;
 }

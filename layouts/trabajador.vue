@@ -17,6 +17,7 @@
     </header>
 
     <main id="contenido" class="contenido">
+      <OpcionesLectura />
       <slot />
     </main>
   </div>
