@@ -69,11 +69,14 @@
         <!-- 3. Cumplimiento por profesional -->
         <section class="card" aria-labelledby="g-prof">
           <h2 id="g-prof">Cumplimiento por profesional</h2>
-          <BarrasHorizontales
-            :items="porProfesional" :max="1.2"
-            :linea="{ valor: 1, etiqueta: 'Línea punteada = 100% de lo planificado' }"
-          />
-          <p class="simple"><b>En simple:</b> {{ fraseProfesionales }}</p>
+          <template v-if="hayDatosSic">
+            <TortaCumplimiento :profesionales="profesionales" />
+            <p class="simple"><b>En simple:</b> {{ fraseProfesionales }}</p>
+          </template>
+          <p v-else class="simple">
+            <b>Sin datos SIC:</b> cuando se integren las atenciones realizadas (SIC), aquí verás cuántos
+            profesionales están en cada rango de cumplimiento y quiénes son.
+          </p>
         </section>
 
         <!-- 4. FOJA por instituto -->
@@ -145,7 +148,6 @@ const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', '
 const nombreMes = (ym: string) => (ym ? `${MESES[Number(ym.slice(5, 7)) - 1]} ${ym.slice(0, 4)}` : '')
 const fmt = (n: number) => Math.round(n).toLocaleString('es-CL')
 const pct = (x: number) => `${Math.round(x * 100)}%`
-const colorCumpl = (c: number) => (c >= 0.9 ? 'var(--ok)' : c >= 0.8 ? 'var(--alerta)' : 'var(--critico)')
 const colorFoja = (c: number) => (c >= 0.6 ? 'var(--ok)' : c >= 0.45 ? 'var(--alerta)' : 'var(--critico)')
 
 /* ---------- datos filtrados ---------- */
@@ -174,9 +176,9 @@ const metaGestion = computed(() => {
 
 // Un profesional puede tener varias filas (multi-instituto): se suman.
 const profesionales = computed(() => {
-  const m = new Map<string, { nombre: string; meta: number; real: number }>()
+  const m = new Map<string, { id: string; nombre: string; meta: number; real: number }>()
   for (const f of filasMes.value) {
-    const p = m.get(f.id_profesional) || { nombre: f.nombre, meta: 0, real: 0 }
+    const p = m.get(f.id_profesional) || { id: f.id_profesional, nombre: f.nombre, meta: 0, real: 0 }
     p.meta += f.meta_atenciones
     p.real += f.atenciones_sic ?? 0
     m.set(f.id_profesional, p)
@@ -184,6 +186,8 @@ const profesionales = computed(() => {
   return [...m.values()].map((p) => ({ ...p, c: p.meta ? p.real / p.meta : 0 }))
 })
 const bajoMeta = computed(() => profesionales.value.filter((p) => p.c < 0.9))
+// SIC vacío o en 0 en todo el filtro = aún no hay datos de lo realizado.
+const hayDatosSic = computed(() => filasMes.value.some((f) => Number(f.atenciones_sic) > 0))
 
 const porInstituto = computed(() => {
   const m = new Map<string, { label: string; meta: number; realizado: number }>()
@@ -195,12 +199,6 @@ const porInstituto = computed(() => {
   }
   return [...m.values()].sort((a, b) => a.realizado / a.meta - b.realizado / b.meta)
 })
-
-const porProfesional = computed(() =>
-  [...profesionales.value]
-    .sort((a, b) => a.c - b.c)
-    .map((p) => ({ label: p.nombre, valor: p.c, texto: pct(p.c), color: colorCumpl(p.c) }))
-)
 
 const fojaInstitutos = computed(() =>
   (indicadores.value?.instituciones || [])
